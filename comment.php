@@ -1,5 +1,5 @@
 <?php
-if ($_GET['atom']) {
+if (empty($_GET['title'])) {
 	$db = new PDO('sqlite:../database'); 
 	$query = $db->prepare('SELECT COUNT(*) FROM pendingcomments');
 	$query->execute();
